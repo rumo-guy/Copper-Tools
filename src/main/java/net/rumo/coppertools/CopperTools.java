@@ -17,11 +17,11 @@ public class CopperTools implements ModInitializer {
 	public static String MOD_ID = "coppertools";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static MiningToolItem COPPER_PICKAXE = new PickaxeItem(CopperToolMaterial.INSTANCE, 5, -2.5f, new FabricItemSettings());
-	public static MiningToolItem COPPER_SHOVEL = new ShovelItem(CopperToolMaterial.INSTANCE, 4.0f, -3.0f, new FabricItemSettings());
-	public static MiningToolItem COPPER_AXE = new AxeItem(CopperToolMaterial.INSTANCE, 8.0f, -0.5f, new FabricItemSettings());
-	public static MiningToolItem COPPER_HOE = new HoeItem(CopperToolMaterial.INSTANCE, 1, -1.0f, new FabricItemSettings());
-	public static SwordItem COPPER_SWORD = new SwordItem(CopperToolMaterial.INSTANCE, 6, 1.6f, new FabricItemSettings());
+	public static MiningToolItem COPPER_PICKAXE = new PickaxeItem(CopperToolMaterial.INSTANCE, 2, -2.5f, new FabricItemSettings());
+	public static MiningToolItem COPPER_SHOVEL = new ShovelItem(CopperToolMaterial.INSTANCE, 1.0f, -3.0f, new FabricItemSettings());
+	public static MiningToolItem COPPER_AXE = new AxeItem(CopperToolMaterial.INSTANCE, 5.0f, -3.1f, new FabricItemSettings());
+	public static MiningToolItem COPPER_HOE = new HoeItem(CopperToolMaterial.INSTANCE, -2, -1.0f, new FabricItemSettings());
+	public static SwordItem COPPER_SWORD = new SwordItem(CopperToolMaterial.INSTANCE, 3, -2.5f, new FabricItemSettings());
 
 	@Override
 	public void onInitialize() {
