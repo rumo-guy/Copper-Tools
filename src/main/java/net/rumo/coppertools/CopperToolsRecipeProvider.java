@@ -67,5 +67,18 @@ public class CopperToolsRecipeProvider extends FabricRecipeProvider {
                 .criterion(FabricRecipeProvider.hasItem(Items.STICK),
                         FabricRecipeProvider.conditionsFromItem(Items.STICK))
                 .offerTo(exporter);
+
+        // sword
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, CopperTools.COPPER_SWORD)
+                .pattern(" c ")
+                .pattern(" c ")
+                .pattern(" s ")
+                .input('c', Items.COPPER_INGOT)
+                .input('s', Items.STICK)
+                .criterion(FabricRecipeProvider.hasItem(Items.COPPER_INGOT),
+                        FabricRecipeProvider.conditionsFromItem(Items.COPPER_INGOT))
+                .criterion(FabricRecipeProvider.hasItem(Items.STICK),
+                        FabricRecipeProvider.conditionsFromItem(Items.STICK))
+                .offerTo(exporter);
     }
 }

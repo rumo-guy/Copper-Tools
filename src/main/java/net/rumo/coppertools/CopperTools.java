@@ -21,6 +21,7 @@ public class CopperTools implements ModInitializer {
 	public static MiningToolItem COPPER_SHOVEL = new ShovelItem(CopperToolMaterial.INSTANCE, 4.0f, -3.0f, new FabricItemSettings());
 	public static MiningToolItem COPPER_AXE = new AxeItem(CopperToolMaterial.INSTANCE, 8.0f, -0.5f, new FabricItemSettings());
 	public static MiningToolItem COPPER_HOE = new HoeItem(CopperToolMaterial.INSTANCE, 1, -1.0f, new FabricItemSettings());
+	public static SwordItem COPPER_SWORD = new SwordItem(CopperToolMaterial.INSTANCE, 6, 1.6f, new FabricItemSettings());
 
 	@Override
 	public void onInitialize() {
@@ -34,5 +35,6 @@ public class CopperTools implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_shovel"), COPPER_SHOVEL);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_axe"), COPPER_AXE);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_hoe"), COPPER_HOE);
+		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_sword"), COPPER_SWORD);
 	}
 }

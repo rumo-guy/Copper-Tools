@@ -23,5 +23,6 @@ public class CopperToolsModelProvider extends FabricModelProvider {
         itemModelGenerator.register(CopperTools.COPPER_SHOVEL, Items.IRON_SHOVEL, Models.GENERATED);
         itemModelGenerator.register(CopperTools.COPPER_AXE, Items.IRON_AXE, Models.GENERATED);
         itemModelGenerator.register(CopperTools.COPPER_HOE, Items.IRON_HOE, Models.GENERATED);
+        itemModelGenerator.register(CopperTools.COPPER_SWORD, Items.IRON_SWORD, Models.GENERATED);
     }
 }
