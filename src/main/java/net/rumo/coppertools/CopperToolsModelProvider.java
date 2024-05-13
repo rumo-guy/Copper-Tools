@@ -19,10 +19,10 @@ public class CopperToolsModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(CopperTools.COPPER_PICKAXE, Items.IRON_PICKAXE, Models.GENERATED);
-        itemModelGenerator.register(CopperTools.COPPER_SHOVEL, Items.IRON_SHOVEL, Models.GENERATED);
-        itemModelGenerator.register(CopperTools.COPPER_AXE, Items.IRON_AXE, Models.GENERATED);
-        itemModelGenerator.register(CopperTools.COPPER_HOE, Items.IRON_HOE, Models.GENERATED);
-        itemModelGenerator.register(CopperTools.COPPER_SWORD, Items.IRON_SWORD, Models.GENERATED);
+        itemModelGenerator.register(CopperTools.COPPER_PICKAXE, Models.GENERATED);
+        itemModelGenerator.register(CopperTools.COPPER_SHOVEL, Models.GENERATED);
+        itemModelGenerator.register(CopperTools.COPPER_AXE, Models.GENERATED);
+        itemModelGenerator.register(CopperTools.COPPER_HOE, Models.GENERATED);
+        itemModelGenerator.register(CopperTools.COPPER_SWORD, Models.GENERATED);
     }
 }
