@@ -29,8 +29,6 @@ public class CopperTools implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
-
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_pickaxe"), COPPER_PICKAXE);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_shovel"), COPPER_SHOVEL);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_axe"), COPPER_AXE);
