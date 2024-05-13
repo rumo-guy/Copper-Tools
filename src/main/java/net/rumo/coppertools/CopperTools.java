@@ -3,6 +3,7 @@ package net.rumo.coppertools;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -34,5 +35,25 @@ public class CopperTools implements ModInitializer {
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_axe"), COPPER_AXE);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_hoe"), COPPER_HOE);
 		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_sword"), COPPER_SWORD);
+
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
+			content.addAfter(Items.STONE_HOE, COPPER_SHOVEL);
+		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
+			content.addAfter(COPPER_SHOVEL, COPPER_PICKAXE);
+		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
+			content.addAfter(COPPER_PICKAXE, COPPER_AXE);
+		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
+			content.addAfter(COPPER_AXE, COPPER_HOE);
+		});
+
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
+			content.addAfter(Items.STONE_SWORD, COPPER_SWORD);
+		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
+			content.addAfter(Items.STONE_AXE, COPPER_AXE);
+		});
 	}
 }
