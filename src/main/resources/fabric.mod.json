@@ -5,11 +5,11 @@
 	"name": "Copper Tools",
 	"description": "Adds copper tools, slightly weaker than iron",
 	"authors": [
-		"Me!"
+		"Rumo"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/rumo-guy/Copper-Tools"
 	},
 	"license": "MIT",
 	"icon": "assets/coppertools/icon.png",
