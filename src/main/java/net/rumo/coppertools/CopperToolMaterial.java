@@ -1,8 +1,11 @@
 package net.rumo.coppertools;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 
 public class CopperToolMaterial implements ToolMaterial {
     public static final CopperToolMaterial INSTANCE = new CopperToolMaterial();
@@ -28,9 +31,8 @@ public class CopperToolMaterial implements ToolMaterial {
     }
 
     @Override
-    public int getMiningLevel() {
-        // same as iron
-        return 2;
+    public TagKey<Block> getInverseTag() {
+        return BlockTags.INCORRECT_FOR_IRON_TOOL;
     }
 
     @Override

@@ -2,7 +2,6 @@ package net.rumo.coppertools;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -18,11 +17,11 @@ public class CopperTools implements ModInitializer {
 	public static String MOD_ID = "coppertools";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static MiningToolItem COPPER_PICKAXE = new PickaxeItem(CopperToolMaterial.INSTANCE, 2, -2.5f, new FabricItemSettings());
-	public static MiningToolItem COPPER_SHOVEL = new ShovelItem(CopperToolMaterial.INSTANCE, 1.0f, -3.0f, new FabricItemSettings());
-	public static MiningToolItem COPPER_AXE = new AxeItem(CopperToolMaterial.INSTANCE, 5.0f, -3.1f, new FabricItemSettings());
-	public static MiningToolItem COPPER_HOE = new HoeItem(CopperToolMaterial.INSTANCE, -2, -1.0f, new FabricItemSettings());
-	public static SwordItem COPPER_SWORD = new SwordItem(CopperToolMaterial.INSTANCE, 3, -2.5f, new FabricItemSettings());
+	public static MiningToolItem COPPER_PICKAXE = new PickaxeItem(CopperToolMaterial.INSTANCE, new Item.Settings().attributeModifiers(PickaxeItem.createAttributeModifiers(CopperToolMaterial.INSTANCE, 2, -2.5f)));
+	public static MiningToolItem COPPER_SHOVEL = new ShovelItem(CopperToolMaterial.INSTANCE, new Item.Settings().attributeModifiers(ShovelItem.createAttributeModifiers(CopperToolMaterial.INSTANCE, 1.0f, -3.0f)));
+	public static MiningToolItem COPPER_AXE = new AxeItem(CopperToolMaterial.INSTANCE, new Item.Settings().attributeModifiers(AxeItem.createAttributeModifiers(CopperToolMaterial.INSTANCE, 5.0f, -3.1f)));
+	public static MiningToolItem COPPER_HOE = new HoeItem(CopperToolMaterial.INSTANCE, new Item.Settings().attributeModifiers(HoeItem.createAttributeModifiers(CopperToolMaterial.INSTANCE, -2, -1.0f)));
+	public static SwordItem COPPER_SWORD = new SwordItem(CopperToolMaterial.INSTANCE, new Item.Settings().attributeModifiers(SwordItem.createAttributeModifiers(CopperToolMaterial.INSTANCE, 3, -2.5f)));
 
 	@Override
 	public void onInitialize() {
