@@ -29,11 +29,11 @@ public class CopperTools implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_pickaxe"), COPPER_PICKAXE);
-		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_shovel"), COPPER_SHOVEL);
-		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_axe"), COPPER_AXE);
-		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_hoe"), COPPER_HOE);
-		Registry.register(Registries.ITEM, new Identifier(MOD_ID, "copper_sword"), COPPER_SWORD);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "copper_pickaxe"), COPPER_PICKAXE);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "copper_shovel"), COPPER_SHOVEL);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "copper_axe"), COPPER_AXE);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "copper_hoe"), COPPER_HOE);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "copper_sword"), COPPER_SWORD);
 
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
 			content.addAfter(Items.STONE_HOE, COPPER_SHOVEL);
