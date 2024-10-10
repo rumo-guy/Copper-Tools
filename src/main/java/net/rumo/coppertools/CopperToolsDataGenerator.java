@@ -9,5 +9,6 @@ public class CopperToolsDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 		pack.addProvider(CopperToolsRecipeProvider::new);
 		pack.addProvider(CopperToolsModelProvider::new);
+		pack.addProvider(CopperToolsItemTagProvider::new);
 	}
 }
